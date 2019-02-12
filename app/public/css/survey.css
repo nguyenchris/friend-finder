@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+nav {
+    padding-bottom: 12px;
+}
+
+.logo {
+    /* padding-top: 15px; */
+    padding-left: 100px;
+    font-size: 33px;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    animation: fadeIn .9s ease-in-out;
+}
+
+.logo a:link,
+.logo a:visited {
+    text-decoration: none;
+    color: hsl(342, 100%, 40%);
+    transition: all .25s;
+}
+
+.logo a:hover {
+    color: hsl(342, 100%, 40%);
+}
+
+.nav-links {
+    
+}
