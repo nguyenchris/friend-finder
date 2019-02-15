@@ -36,6 +36,6 @@ nav {
     color: hsl(342, 100%, 40%);
 }
 
-.nav-links {
-    
+.navbar-nav .nav-item {
+    padding-right: 125px;
 }

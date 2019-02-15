@@ -69,12 +69,12 @@ body {
 
 .header-primary {
     font-size: 60px;
-    animation: moveInLeft 1.7s ease-in-out;
+    animation: moveInLeft 1.4s ease-in-out;
 }
 
 .header-secondary {
     font-size: 25px;
-    animation: moveInRight 1.7s ease-in-out;
+    animation: moveInRight 1.4s ease-in-out;
 }
 
 
