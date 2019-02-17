@@ -13,6 +13,12 @@ body {
 
 nav {
     padding-bottom: 12px;
+    margin-bottom: 50px;
+}
+
+#survey-header {
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .logo {
@@ -38,4 +44,10 @@ nav {
 
 .navbar-nav .nav-item {
     padding-right: 125px;
+}
+
+#form div {
+    /* width: 100px; */
+    /* text-align: center; */
+    /* margin: 0 auto; */
 }

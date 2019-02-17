@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+    <script
+      src="
+                https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/survey.css">
+    <link rel="stylesheet" href="css/survey.css" />
+    <script src="js/survey.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <nav class="navbar navbar-light bg-light">
-        <div class="logo">
-            <a href="/">Match<i class="fas fa-heart"></i>Heaven</a>
-        </div>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/api/friends">Friends API</a>
-            </li>
-        </ul>
-
+      <div class="logo">
+        <a href="/">Match<i class="fas fa-heart"></i>Heaven</a>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/api/friends">Friends API</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- <nav>
@@ -47,24 +67,244 @@
         </div>
     </nav> -->
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Match!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="container" id="form">
+      <div class="row">
+        <div class="col" id="survey-header">
+          <h3>Survey Questions</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Name</span
+              >
+            </div>
+            <input
+              type="text"
+              name="form"
+              class="form-control"
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
+              id="name-form"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Profile Picture URL</span
+              >
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              name="form"
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
+              id="image-form"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >1. I would describe myself as independent and
+              self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"
+              >I would describe myself as independent and self-reliant.</label
+            >
+            <select class="form-control" id="q1">
+              <option>Select an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="submit-area">
+          <div class="warning-area"></div>
+
+          <button type="button" class="btn btn-secondary btn-block" id="submit">
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
 
-</body>
-
+    <!-- 
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input
+            type="checkbox"
+            aria-label="Checkbox for following text input"
+          />
+        <input type="checkbox" aria-label="Checkbox for following text input" />
+        <input type="checkbox" aria-label="Checkbox for following text input" />
+        <input type="checkbox" aria-label="Checkbox for following text input" />
+        <input type="checkbox" aria-label="Checkbox for following text input" />
+        </div>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Text input with checkbox"
+      />
+    </div> -->
+  </body>
 </html>
