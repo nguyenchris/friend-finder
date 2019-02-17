@@ -21,8 +21,6 @@ $(document).ready(function() {
     $('.modal-body').empty();
     const name = $('#name-form').val();
     const image = $('#image-form').val();
-    $('#name-form').val('');
-    $('#image-form').val('');
     $('#form option:selected').each(function() {
       const value = $(this).val();
       if (value == 'Select an Option') {
@@ -41,6 +39,8 @@ $(document).ready(function() {
         $('.warning-area').empty();
       }, 2000);
     } else {
+      $('#name-form').val('');
+      $('#image-form').val('');
       getMatch(name, image, answers);
     }
   });
