@@ -86,7 +86,7 @@ $(document).ready(function() {
       });
 
       const htmlName = `<h3>Name: ${result[matchedPerson.index].name}</h3>`;
-      const htmlImage = `<img src="${result[matchedPerson.index].photo}>`;
+      const htmlImage = `<img src="${result[matchedPerson.index].photo}">`;
       const html = $('<div>').html(htmlName + htmlImage);
       $('.modal-body').append(html);
       $('.modal').modal('show');
