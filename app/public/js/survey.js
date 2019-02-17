@@ -32,17 +32,17 @@ $(document).ready(function() {
       }
     });
 
-    // if (!name || !image || answers.length !== 10) {
-    //   $('.warning-area').html(
-    //     '<p class="text-center">You must fill out every question!</p>'
-    //   );
+    if (!name || !image || answers.length !== 10) {
+      $('.warning-area').html(
+        '<p class="text-center">You must fill out every question!</p>'
+      );
 
-    //   setTimeout(function() {
-    //     $('.warning-area').empty();
-    //   }, 2000);
-    // } else {
+      setTimeout(function() {
+        $('.warning-area').empty();
+      }, 2000);
+    } else {
       getMatch(name, image, answers);
-    // }
+    }
   });
 
   function getMatch(name, image, answers) {
@@ -84,8 +84,6 @@ $(document).ready(function() {
       const matchedPerson = scoreDifferences.find(obj => {
         return obj.difference === sortedDifferences[0];
       });
-
-      console.log(result[matchedPerson.index]);
 
       const htmlName = `<h3>Name: ${result[matchedPerson.index].name}</h3>`;
       const htmlImage = `<img src="${result[matchedPerson.index].photo}>`;

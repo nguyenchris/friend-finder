@@ -9,9 +9,7 @@ router.get('/friends', (req, res) => {
 
 router.post('/friends', (req, res) => {
     const answers = req.body;
-    console.log(answers)
     friends.push(answers);
-    res.send(true);
 });
 
 module.exports = router;
