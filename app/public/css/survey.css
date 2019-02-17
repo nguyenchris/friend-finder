@@ -46,8 +46,6 @@ nav {
     padding-right: 125px;
 }
 
-#form div {
-    /* width: 100px; */
-    /* text-align: center; */
-    /* margin: 0 auto; */
+.modal-image {
+    width: 80%;
 }
